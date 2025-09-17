@@ -4,13 +4,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Coming Soon</title>
+  <meta name="theme-color" content="#000"> <!-- mobile address bar -->
   <style>
-    html,body{height:100%;margin:0;background:#0f172a}
-    body{display:grid;place-items:center}
-    img{max-width:92vw;max-height:92vh;height:auto;width:auto;display:block}
+    html,body{height:100%;margin:0;background:#000;overflow:hidden}
+    /* Fill viewport, keep aspect ratio; black bars where needed */
+    img{
+      width:100vw;
+      height:100vh;
+      object-fit:contain;
+      display:block;
+      /* if your image has transparency, this keeps it black behind it */
+      background:#000;
+    }
   </style>
 </head>
 <body>
-  <img src="./hero.jpg" alt="Coming soon" loading="eager" />
+  <img src="./hero.jpg" alt="Coming soon" />
 </body>
 </html>
